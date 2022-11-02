@@ -1,4 +1,4 @@
-FROM golang:1.16 as builder
+FROM docker.io/library/golang:1.16 as builder
 
 ARG REPOPATH=$GOPATH/src/github.com/F5Networks/k8s-bigip-ctlr
 ARG RUN_TESTS
@@ -13,7 +13,7 @@ COPY . .
 RUN $REPOPATH/build-tools/rel-build.sh && \
     go get github.com/go-delve/delve/cmd/dlv@v1.8.2
 
-FROM python:3.10-slim-buster
+FROM python:3.10-slim-bullseye
 
 ENV APPPATH /app
 
