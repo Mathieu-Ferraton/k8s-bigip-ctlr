@@ -75,7 +75,7 @@ pre-build:
 prod-build: pre-build
 	@echo "Building with running tests..."
 
-	docker build --build-arg RUN_TESTS=1 --build-arg BUILD_VERSION=$(BUILD_VERSION) --build-arg BUILD_INFO=$(BUILD_INFO) -t k8s-bigip-ctlr:latest -f build-tools/Dockerfile.$(BASE_OS) .
+	docker build --build-arg RUN_TESTS=1 --build-arg BUILD_VERSION=$(BUILD_VERSION) --build-arg BUILD_INFO=$(BUILD_INFO) -t k8s-bigip-ctlr:ppc64le -f build-tools/Dockerfile.$(BASE_OS) .
 
 prod-quick: prod-build-quick
 

@@ -56,10 +56,10 @@ args:
 
 image:
   # Use the tag to target a specific version of the Controller
-  user: f5networks
+  user: quay.io/mferrato
   repo: k8s-bigip-ctlr
   pullPolicy: Always
-version: latest
+version: ppc64le
 # affinity:
 #   nodeAffinity:
 #     requiredDuringSchedulingIgnoredDuringExecution:
